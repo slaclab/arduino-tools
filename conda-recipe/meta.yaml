@@ -4,6 +4,7 @@ package:
 
 source:
    path: ..
+   git_url: ..
 
 build:
    number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
@@ -20,8 +21,7 @@ requirements:
    build:
      - python
      - ripgrep
-   run:
-     - python
+
 about:
    home: https://github.com/slaclab/arduino-tools
    summary: anaconda wrapper for arduino-cli

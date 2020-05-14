@@ -27,7 +27,6 @@ def arduino_cli(command):
     os.chdir(os.environ['PREFIX'])
     cmd=[ 'bin/arduino-cli'+exe[target] ,'--config-file','etc/arduino-cli.yaml' ]
     cmd=cmd+command.split(" ")
-    print(cmd)
     process = subprocess.Popen(cmd,
     stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
